@@ -2,37 +2,29 @@ package Model;
 
 import java.util.Date;
 
-public class Medico extends Pessoa{
-    private String crm;
-    private String senha;
+public class Enfermeiro extends Pessoa{
+    private String cre;
     private String login;
+    private String senha;
     private String nomeSocial;
     private Jornada jornada;
 
-    public Medico(int id, String nome, String fone1, String fone2, String email, String cpfCnpj,
-            String rgInscricaoEstadual, String cep, String cidade, String bairro, String logradouro,
-            String complemento, String crm, String senha, String login, String nomeSocial) {
+    public Enfermeiro(int id, String nome, String fone1, String fone2, String email, String cpfCnpj,
+                     String rgInscricaoEstadual, String cep, String cidade, String bairro, String logradouro,
+                     String complemento, String cre, String login, String senha, String nomeSocial) {
         super(id, nome, fone1, fone2, email, cpfCnpj, rgInscricaoEstadual, cep, cidade, bairro, logradouro, complemento);
-        this.crm = crm;
-        this.senha = senha;
+        this.cre = cre;
         this.login = login;
+        this.senha = senha;
         this.nomeSocial = nomeSocial;
     }
 
-    public String getCrm() {
-        return crm;
+    public String getCre() {
+        return cre;
     }
 
-    public void setCrm(String crm) {
-        this.crm = crm;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setCre(String cre) {
+        this.cre = cre;
     }
 
     public String getLogin() {
@@ -41,6 +33,14 @@ public class Medico extends Pessoa{
 
     public void setLogin(String login) {
         this.login = login;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
     public String getNomeSocial() {
@@ -65,7 +65,7 @@ public class Medico extends Pessoa{
 
     @Override
     public String toString(){
-        return super.toString() + "\nCRM: " + this.crm + "\nNome Social: " + this.nomeSocial;
+        return super.toString() + "\nCRE: " + this.cre + "\nNome Social: " + this.nomeSocial;
     }
 
 }
